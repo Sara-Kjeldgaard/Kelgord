@@ -1,7 +1,198 @@
 html,
 body,
-main{
+main {
     width: 100%;
     margin: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
 }
+
+h2 {
+    color: #d66b00;
+    font-size: 30px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+
+/******************************************************************** 
+***************************** Landing Page *************************/
+
+#landingPage h1,
+#landingPage h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 48px;
+    width: 670px;
+}
+
+#landingPage h3 {
+    color: #1f3050;
+    font-weight: 800;
+    font-size: 35px;
+    width: 670px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#langingPageTop {
+    display: flex;
+    height: 70vh;
+}
+
+#langingPageTopText {
+    background-color: #314467;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+#landingPage h2 span {
+    font-weight: bold;
+}
+
+#landingPage #KelgordPic {
+    background-image: url(/images/KelgordNJ.jpg);
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+#landingPageMainTextColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landingPageMainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+#landingPageMainText p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+#landingPageMainText img {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+/******************************************************************** 
+************************ Top Title Description *********************/
+
+#TopTitleDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+}
+
+#TopTitleDescription h1 {
+    color: #d66b00;
+    font-size: 50px;
+}
+
+#divider {
+    background-color: #00000019;
+    height: 4px;
+    width: 700px;
+}
+
+#TopTitleDescription p {
+    text-align: center;
+    width: 400px;
+    font: 600 20px/24px Raleway;
+}
+
+/******************************************************************** 
+********** Styled links with orange border and arrow ***************/
+.orange-link {
+    display: flex;
+    align-items: center;
+    color: #d66b00;
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+}
+
+.orange-link img {
+    margin-left: 5px;
+    width: 25px;
+}
+
+/******************************************************************** 
+****************************** Om Kelgord **************************/
+
+#OmKelgordPage #videoAndText {
+    display: flex;
+    justify-content: center;
+}
+
+#OmKelgordPage #videoText {
+    width: 500px;
+    color: white;
+    background-color: #314467;
+}
+
+#OmKelgordPage #experiencedText {
+    width: 700px;
+}
+
+
+#certificationAndCourses {
+    width: 60%;
+    max-width: 1000px;
+}
+
+#certificationAndCoursesText {
+    flex: 1;
+    padding-right: 25%;
+}
+
+#certificationAndCoursesText p span {
+    font-weight: bold;
+}
+
+#certificationAndCoursesTextAlways p {
+    margin: 3px 0;
+}
+
+#OmKelgordPage #certificateIcon img{
+    width: 140px;
+    margin: 30px 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

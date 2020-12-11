@@ -6,19 +6,29 @@
             </a>
             <ul class="nav-list">
                 <li>
-                    <a v-bind:class="{active: active === 'OmKelgord'}"  href="">Om Kelgord</a>
+                    <a v-bind:class="{ active: active === 'OmKelgord' }" href=""
+                        >Om Kelgord</a
+                    >
                 </li>
                 <li>
-                    <a class="active" href="">Kerneværdier</a>
+                    <a v-bind:class="{ active: active === 'Kerneværdier' }" href=""
+                        >Kerneværdier</a
+                    >
                 </li>
                 <li>
-                    <a href="">Kompetencer</a>
+                    <a v-bind:class="{ active: active === 'Kompetencer' }" href=""
+                        >Kompetencer</a
+                    >
                 </li>
                 <li>
-                    <a href="">Konsulentydelser</a>
+                    <a v-bind:class="{ active: active === 'Konsulentydelser' }" href=""
+                        >Konsulentydelser</a
+                    >
                 </li>
                 <li>
-                    <a href="">Kontakt</a>
+                    <a v-bind:class="{ active: active === 'Kontakt' }" href=""
+                        >Kontakt</a
+                    >
                 </li>
             </ul>
         </nav>
@@ -26,9 +36,14 @@
 </template>
 
 <script>
-module.export = {
+/* (module.exports) dette er js som fortæller Vue at det vi sætter det lig med er js delen af vores komponent. 
+    Kildehenvisning: https://vuejs.org/v2/guide/single-file-components.html*/
+
+module.exports = {
+    /*(props) Bruges til at give retten til at angive en variabel til en komponent i Vue
+    (active) Er en variabel til en komponent i Vue*/
     props: ["active"]
-}
+};
 </script>
 
 <style>
@@ -59,10 +74,11 @@ nav {
     width: 180px;
     padding: 0 20x;
     text-align: center;
-    transition: all .2s ease; 
+    transition: all 0.2s ease;
 }
 
-.nav-list a:hover,  .nav-list .active {
+.nav-list a:hover,
+.nav-list .active {
     color: #d66b00;
     font-weight: bold;
 }
