@@ -1,12 +1,12 @@
 <template>
     <header>
         <nav>
-            <a id="logoTop" href="">
+            <a id="logoTop" href="/">
                 <img src="/images/Logo-Kelgord.svg" />
             </a>
             <ul class="nav-list">
                 <li>
-                    <a v-bind:class="{ active: active === 'OmKelgord' }" href=""
+                    <a v-bind:class="{ active: active === 'OmKelgord' }" href="/OmKelgord.html"
                         >Om Kelgord</a
                     >
                 </li>

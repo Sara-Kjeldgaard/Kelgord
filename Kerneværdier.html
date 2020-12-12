@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="utf-8" />
+        <title>Kelgord</title>
+        <meta name="author" content="Sara Skovbjerg Kjeldgaard" />
+        <meta name="description" content="Example description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="icon" type="image/x-icon" href="" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--    Her loades vue     -->
+        <script src="https://unpkg.com/vue"></script>
+
+        <!--    Her loades værktøjet til at loade vue filer (hvor vores komponenter laves)    -->
+        <script src="https://unpkg.com/http-vue-loader"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <custom-header active="Konsulentydelser"></custom-header>
+            <main id="KonsulentydelserPage" class="column">
+                <div id="TopTitleDescription">
+                    <h1>
+                        Konsulentydelser
+                    </h1>
+                    <div id="divider"></div>
+                    <p>
+                        At hyre konsulenter er ikke kun et spørgsmål om
+                        resurser. Det er et spørgsmål om <span>tillid.</span>
+                    </p>
+                </div>
+     
+            </main>
+            <custom-footer></custom-footer>
+        </div>
+        <script type="text/javascript" src="/js/js.js"></script>
+    </body>
+</html>
