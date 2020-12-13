@@ -11,17 +11,17 @@
                     >
                 </li>
                 <li>
-                    <a v-bind:class="{ active: active === 'Kerneværdier' }" href=""
+                    <a v-bind:class="{ active: active === 'Kerneværdier' }" href="/Kernevaerdier.html"
                         >Kerneværdier</a
                     >
                 </li>
                 <li>
-                    <a v-bind:class="{ active: active === 'Kompetencer' }" href=""
+                    <a v-bind:class="{ active: active === 'Kompetencer' }" href="/Kompetencer.html"
                         >Kompetencer</a
                     >
                 </li>
                 <li>
-                    <a v-bind:class="{ active: active === 'Konsulentydelser' }" href=""
+                    <a v-bind:class="{ active: active === 'Konsulentydelser' }" href="/Konsulentydelser.html"
                         >Konsulentydelser</a
                     >
                 </li>
@@ -48,7 +48,7 @@ module.exports = {
 
 <style>
 nav {
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
