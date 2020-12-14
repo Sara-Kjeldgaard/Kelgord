@@ -4,14 +4,14 @@ main {
     width: 100%;
     margin: 0;
     font-family: "Raleway", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     /*Gør at eksempel chrome viser fonts mere korrekt - Brugt så min font er mere strømlignet med design (fonten bliver blødere)*/
     -webkit-font-smoothing: antialiased;
 }
 
 h2 {
     color: #d66b00;
-    font-size: 33px;
+    font-size: 24px;
 }
 
 .column {
@@ -23,11 +23,10 @@ h2 {
 .row {
     display: flex;
     justify-content: center;
-    
 }
 
 #app {
-     display: flex;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
@@ -51,24 +50,26 @@ p {
 #landingPage h2 {
     color: white;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 32px;
 }
 
 #landingPage h3 {
     color: #1f3050;
     font-weight: 800;
-    font-size: 29px;
+    font-size: 23px;
     width: 670px;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 30px;
     width: 100%;
     text-align: center;
 }
 
 #landingPage h3 #landingPageTitleCaroussel {
     color: #d66b00;
-    font-size: 40px;
+    font-size: 32px;
     padding-left: 3px;
+    display: block;
+    margin-top: 10px;
 }
 
 #langingPageTop {
@@ -113,7 +114,7 @@ p {
 }
 
 #langingPageTopTextContainer {
-    width: 670px;
+    width: 600px;
     padding-right: 100px;
     align-items: flex-start;
 }
@@ -139,11 +140,12 @@ p {
 }
 
 #landingPageMainText p {
-    font-size: 17px;
+    font-size: 14px;
     margin: 10px 0;
 }
 
 #landingPageMainText img {
+    width: 120%;
     margin-top: 60px;
     margin-bottom: 80px;
 }
@@ -155,25 +157,24 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px;
-    margin-bottom: 120px;
+    margin: 60px;
 }
 
 #TopTitleDescription h1 {
     color: #d66b00;
-    font-size: 42px;
+    font-size: 32px;
 }
 
 #divider {
     background-color: #00000019;
-    height: 2px;
-    width: 700px;
+    height: 3px;
+    width: 500px;
 }
 
 #TopTitleDescription p {
     text-align: center;
-    width: 400px;
-    font: 600 20px/24px Raleway;
+    width: 300px;
+    font-weight: 600;
 }
 
 #TopTitleDescription p span {
@@ -186,28 +187,26 @@ p {
 #sideTitleDescription {
     margin: 0 60px;
     align-items: flex-start;
-    
 }
 
 #sideTitleDescription h1 {
     color: #d66b00;
-    font-size: 42px;
+    font-size: 32px;
     margin-bottom: 10px;
 }
 
-
 #dividerVertical {
     background-color: #00000019;
-    height: 700px;
-    width: 2px;
+    height: 500px;
+    width: 3px;
     margin-right: 60px;
 }
 
-#sideTitleDescription p{
+#sideTitleDescription p {
     margin-top: 0;
     text-align: left;
     width: 320px;
-    font: 600 20px/24px Raleway;
+    font-weight: 600;
 }
 
 #sideTitleDescription p span {
@@ -216,7 +215,6 @@ p {
 
 #kerneKompPageContent {
     width: 1500px;
-
 }
 /******************************************************************** 
 ********** Styled links with orange border and arrow ***************/
@@ -247,6 +245,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80%;
 }
 
 /*Videoen hentes fra Youtube. Vi gør videoen responsiv efter denne guide - Kildehenvisning: https://flaviocopes.com/responsive-youtube-videos/?fbclid=IwAR0QUZhjsiBtL4ji1c8JO0j0L6VGfv1rJvcQNzwAVyhr7oymGr7LxHvP_5k*/
@@ -281,7 +280,7 @@ p {
 
 #OmKelgordPage #videoText {
     height: 40%;
-    width: 500px;
+    width: 550px;
     color: white;
     background-color: #314467;
     clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
@@ -316,62 +315,80 @@ p {
 }
 
 #OmKelgordPage #certificateIcon img {
-    width: 140px;
+    width: 120px;
     margin: 30px 20px;
 }
 
 /******************************************************************** 
 ************************** Konsulentydelser ************************/
+#KonsulentydelserPage {
+    flex: 1;
+}
+
 #konsulentydelser {
     width: 100%;
     justify-content: space-between;
-    background-color: #314467;
 }
 
 #konsulentydelserContent {
     width: 100%;
     max-width: 2200px;
+    height: 450px;
     margin: 0 auto;
+    align-items: center;
 }
 
 .konsulentydelse {
     flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #314467;
-    height: 460px;
+    height: 390px;
     transition: all 0.3s ease;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .konsulentydelse:hover {
     flex: 3;
+    z-index: 1;
+    height: 450px;
+    /* her bruges drop shadow da normal box shadow ikke fungerer med clip path (som vi brugre til at lave formen)
+    /* Kildehenvisning: https://css-tricks.com/using-box-shadows-and-clip-path-together/ */
+    filter: drop-shadow(0px 0px 19px rgba(0, 0, 0, 0.15));
+}
+
+.konsulentydelse-form {
+    height: 100%;
+    width: 125%;
+    margin-left: -12.5%;
+    background-color: #314467;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* bruges så padding ikke får boksen til at blive større */
+    box-sizing: border-box;
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    /* Vi bruger dog en px værdi istedet for procent. Det er fordi vi gerne vil have formen til at hælde lige meget
+    selvom elementet bliver større (hvor en procent værdi ville få den til at hælde mere) */
+    clip-path: polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0% 100%);
+}
+
+.konsulentydelse:first-child .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0% 100%);
+}
+
+.konsulentydelse:last-child .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(100px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.konsulentydelse:hover .konsulentydelse-form {
     background-color: white;
-    padding: 0 140px;
-    box-shadow: 0px 3px 18px #00000038;
-    /*Kildehenvisning: https://bennettfeely.com/clippy*/
-    clip-path: polygon(25% 0, 100% 0, 75% 100%, 0% 100%);
-}
-
-.konsulentydelse:hover:first-child {
-    /*Kildehenvisning: https://bennettfeely.com/clippy*/
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
-    /* Første element skal have mindre padding til venstre, da denne side ikke er skrå  */
-    padding-left: 40px;
-
-}
-
-.konsulentydelse:hover:last-child {
-    /*Kildehenvisning: https://bennettfeely.com/clippy*/
-    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
-    /* Sidste element skal have mindre padding til højre, da denne side ikke er skrå  */
-    padding-right: 40px;
 }
 
 .konsulentydelse:hover h2 {
     color: #d66b00;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .konsulentydelse:hover p {
@@ -389,6 +406,9 @@ p {
 
 .konsulentydelse h2 {
     color: white;
+    font-size: 26px;
+    text-align: center;
+    white-space: pre-line;
 }
 
 .konsulentydelse p {
@@ -396,29 +416,53 @@ p {
 }
 
 /******************************************************************** 
-************************** kerneværdierPage ************************/
+**************** KerneværdierPage and Kompetencer ******************/
 
-#kernevaerdierPage {
-        flex: 1;
-    align-items: center;
-}
 
-/******************************************************************** 
-************************** Kompetencer ************************/
-
-#kompetencerPage {
+#kernevaerdierPage, #kompetencerPage {
+    flex: 1;
     padding: 60px 0;
     align-items: center;
     align-items: flex-start;
 }
 
-#kompetencerPage h2 {
-    font-size: 25px;
+#kernevaerdierPage #kompetencerPage h2 {
+    font-size: 22px;
 }
 
 .kompetence p {
     width: 80%;
-    max-width: 550px;
+    max-width: 700px;
+}
+
+.kompetence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+/******************************************************************** 
+******************************* Kontakt ****************************/
+#kontaktPage {
+    flex: 1;
+}
+
+#kontaktPage #map {
+    width: 400px;
+    height: 300px;
+    
+}
+
+
+#kontaktText {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    
+}
+
+#kontaktText a, #kontaktText span {
+    margin: 30px 0;
 }
 
 

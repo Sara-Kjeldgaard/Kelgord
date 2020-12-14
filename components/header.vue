@@ -26,7 +26,7 @@
                     >
                 </li>
                 <li>
-                    <a v-bind:class="{ active: active === 'Kontakt' }" href=""
+                    <a v-bind:class="{ active: active === 'Kontakt' }" href="/Kontakt.html"
                         >Kontakt</a
                     >
                 </li>
@@ -72,7 +72,6 @@ nav {
     color: black;
     display: block;
     width: 180px;
-    padding: 0 20x;
     text-align: center;
     transition: all 0.2s ease;
 }
