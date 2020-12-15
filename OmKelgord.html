@@ -19,6 +19,13 @@
 
         <!--    Her loades værktøjet til at loade vue filer (hvor vores komponenter laves)    -->
         <script src="https://unpkg.com/http-vue-loader"></script>
+        
+         <!--    Her loades jquery    -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"
+        ></script>
     </head>
 
     <body>
@@ -40,7 +47,6 @@
                             width="560"
                             height="315"
                             src="https://www.youtube.com/embed/ITqR2OPrumc?"
-                            
                             frameborder="0"
                             allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
@@ -95,6 +101,12 @@
                             </p>
                             <p><span>2014</span> - ScrumMaster</p>
                         </div>
+
+                        <a id="readMore" class="orange-link">
+                            <span>Læs mere om Kelgords certificeringer</span>
+                            <img src="/images/ArrowDown.svg" />
+                        </a>
+
                         <div id="certificationAndCoursesTextExtra">
                             <p>
                                 <span>1996 – 2014 </span>- Diverse SAP
@@ -128,11 +140,12 @@
                                 <span>1991 – 1994 </span>- Teknisk uddannelse på
                                 SAS værktøjer, Sammenlagt ca. 2 uge
                             </p>
-                        </div>
-                        <a class="orange-link">
-                            <span>Læs mere om Kelgords certificeringer</span>
+                            <a id="showLess" class="orange-link">
+                            <span>Vis mindre</span>
                             <img src="/images/ArrowDown.svg" />
                         </a>
+                        </div>
+                        
                     </div>
                     <div id="certificateIcon">
                         <img src="/images/ScrumIcon.png" />
@@ -143,5 +156,6 @@
             <custom-footer></custom-footer>
         </div>
         <script type="text/javascript" src="/js/js.js"></script>
+          <script type="text/javascript" src="/js/omKelgord.js"></script>
     </body>
 </html>

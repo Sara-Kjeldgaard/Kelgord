@@ -150,7 +150,7 @@ p {
     margin-bottom: 80px;
 }
 
-/******************************************************************** 
+/*********************** Side Title Description ********************* 
 ************************ Top Title Description *********************/
 
 #TopTitleDescription {
@@ -160,6 +160,7 @@ p {
     margin: 60px;
 }
 
+#sideTitleDescription h1,
 #TopTitleDescription h1 {
     color: #d66b00;
     font-size: 32px;
@@ -177,12 +178,10 @@ p {
     font-weight: 600;
 }
 
+#sideTitleDescription p span,
 #TopTitleDescription p span {
     font-weight: bold;
 }
-
-/******************************************************************** 
-************************ Side Title Description *********************/
 
 #sideTitleDescription {
     margin: 0 60px;
@@ -190,8 +189,6 @@ p {
 }
 
 #sideTitleDescription h1 {
-    color: #d66b00;
-    font-size: 32px;
     margin-bottom: 10px;
 }
 
@@ -209,13 +206,6 @@ p {
     font-weight: 600;
 }
 
-#sideTitleDescription p span {
-    font-weight: bold;
-}
-
-#kerneKompPageContent {
-    width: 1500px;
-}
 /******************************************************************** 
 ********** Styled links with orange border and arrow ***************/
 .orange-link {
@@ -319,6 +309,27 @@ p {
     margin: 30px 20px;
 }
 
+#certificationAndCoursesTextExtra {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+#certificationAndCoursesTextExtra.show {
+    height: 500px;
+}
+
+#certificationAndCourses .orange-link {
+    flex: 0;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+#certificationAndCourses .orange-link img {
+    width: 12px;
+}
+
 /******************************************************************** 
 ************************** Konsulentydelser ************************/
 #KonsulentydelserPage {
@@ -418,28 +429,56 @@ p {
 /******************************************************************** 
 **************** KerneværdierPage and Kompetencer ******************/
 
-
-#kernevaerdierPage, #kompetencerPage {
+#kerneKompPage {
     flex: 1;
     padding: 60px 0;
     align-items: center;
-    align-items: flex-start;
+    justify-content: center;
 }
 
-#kernevaerdierPage #kompetencerPage h2 {
-    font-size: 22px;
-}
-
-.kompetence p {
+#kerneKompPageContent {
     width: 80%;
-    max-width: 700px;
+    max-width: 1200px;
 }
 
-.kompetence {
+#kerneKompPage h2 {
+    font-size: 22px;
+    color: #1f3050;
+    transition: all 0.2s ease;
+}
+
+.kerne-komp img {
+    transition: all 0.2s ease;
+}
+
+.kerne-komp p {
+    width: 95%;
+    max-width: 700px;
+    height: 0;
+    /*denne gemmer det som fylder ud over (virker da height er 0)*/
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.kerne-komp {
     display: flex;
     justify-content: center;
     align-items: center;
-    }
+    cursor: pointer;
+}
+
+#kerneKompPage .kerne-komp:hover h2,
+#kerneKompPage .kerne-komp-active h2 {
+    color: #d66b00;
+}
+
+#kerneKompPage .kerne-komp-active p {
+    height: 90px;
+}
+
+.kerne-komp-active img {
+    transform: rotate(180deg);
+}
 
 /******************************************************************** 
 ******************************* Kontakt ****************************/
@@ -450,38 +489,15 @@ p {
 #kontaktPage #map {
     width: 400px;
     height: 300px;
-    
 }
-
 
 #kontaktText {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 40px;
-    
 }
 
-#kontaktText a, #kontaktText span {
+#kontaktText a,
+#kontaktText span {
     margin: 30px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

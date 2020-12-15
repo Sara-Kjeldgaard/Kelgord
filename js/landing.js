@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
         //titles[counter] = den titel vi er kommet til (elementet i titles med counter som rækkefølge)
         typeWriter(titles[counter]);
     }
-
+    
+    //Kildehenvisning: https://www.w3schools.com/howto/howto_js_typewriter.asp
     function typeWriter(title) {
         // Vi går kun ind i if sætning hvis vi ikke er færdige med at skrive ordet endnu
         if (counterTypeWriter < title.length) {

@@ -1,5 +1,4 @@
 // DOMContentLoaded er et event som bruges så koden ikke køres før HTML er loaded
-// Dette er ikke vigtigt for VUE eller Komponenter - Det er fordi at JS skal bruge HTML
 document.addEventListener("DOMContentLoaded", function() {
     //********* Map with marker *********//
     mapboxgl.accessToken =
