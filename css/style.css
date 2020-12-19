@@ -150,6 +150,58 @@ p {
     margin-bottom: 80px;
 }
 
+/* Styling for mobil */
+@media only screen and (max-width: 768px) {
+    #landingPage h1,
+    #landingPage h2 {
+        color: white;
+        font-weight: 600;
+        font-size: 23px;
+        text-align: center;
+        width: 80%;
+    }
+    #landingPageTopContent {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #landingPageTopWhiteStripe,
+    #langingPageTopText {
+        box-sizing: border-box;
+        height: 42vh;
+        width: 100%;
+        /*Kildehenvisning: https://bennettfeely.com/clippy*/
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+    }
+
+    #landingPageTopWhiteStripe {
+        left: 0;
+        top: 25px;
+    }
+
+    #langingPageTopText {
+        position: relative;
+        margin-bottom: -80px;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+    #langingPageTopTextContainer {
+        width: 100%;
+        padding-right: 0;
+        align-items: center;
+    }
+
+    #landingPage #KelgordPic {
+        width: 100%;
+        height: 45vh;
+    }
+
+    #landingPageMainText {
+        width: 80%;
+    }
+}
+
 /*********************** Side Title Description ********************* 
 ************************ Top Title Description *********************/
 
@@ -204,6 +256,14 @@ p {
     text-align: left;
     width: 320px;
     font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    #divider {
+        background-color: #00000019;
+        height: 3px;
+        width: 100%;
+    }
 }
 
 /******************************************************************** 
@@ -330,6 +390,57 @@ p {
     width: 12px;
 }
 
+#readMore {
+    width: 290px;
+}
+
+#showLess {
+    width: 100px;
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 768px) {
+    #OmKelgordPage #videoAndText {
+        flex-direction: column;
+    }
+
+    #OmKelgordPage #video {
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 0% 100%);
+        margin: 0;
+    }
+
+    #OmKelgordPage #videoText {
+        box-sizing: border-box;
+        padding: 20px;
+        width: 100%;
+        clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    #OmKelgordPage #experiencedText {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    #certificationAndCourses {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    #certificationAndCoursesText {
+        width: 100%;
+    }
+
+    #certificationAndCoursesTextExtra.show {
+        height: 580px;
+    }
+
+    #certificateIcon {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 /******************************************************************** 
 ************************** Konsulentydelser ************************/
 #KonsulentydelserPage {
@@ -338,6 +449,7 @@ p {
 
 #konsulentydelser {
     width: 100%;
+    overflow: hidden;
     justify-content: space-between;
 }
 
@@ -350,13 +462,13 @@ p {
 }
 
 .konsulentydelse {
-    flex: 2;
+    flex: 3;
     height: 390px;
     transition: all 0.3s ease;
 }
 
 .konsulentydelse:hover {
-    flex: 3;
+    flex: 5;
     z-index: 1;
     height: 450px;
     /* her bruges drop shadow da normal box shadow ikke fungerer med clip path (som vi brugre til at lave formen)
@@ -392,8 +504,22 @@ p {
     clip-path: polygon(100px 0, 100% 0, 100% 100%, 0% 100%);
 }
 
+.konsulentydelse:first-child:hover .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0% 100%);
+}
+
+.konsulentydelse:last-child:hover .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(120px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
 .konsulentydelse:hover .konsulentydelse-form {
     background-color: white;
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    /* Vi bruger dog en px værdi istedet for procent. Det er fordi vi gerne vil have formen til at hælde lige meget
+    selvom elementet bliver større (hvor en procent værdi ville få den til at hælde mere) */
+    clip-path: polygon(120px 0, 100% 0, calc(100% - 120px) 100%, 0% 100%);
 }
 
 .konsulentydelse:hover h2 {
@@ -405,7 +531,7 @@ p {
 .konsulentydelse:hover p {
     display: block;
     text-align: center;
-    width: 18vw;
+    width: 17vw;
 }
 
 /*Her sørger vi for at teksten ikke bliver bredere når rækken med konsulentydelser holder op med at vokse */
@@ -420,10 +546,56 @@ p {
     font-size: 26px;
     text-align: center;
     white-space: pre-line;
+    padding: 0 50px;
 }
 
 .konsulentydelse p {
     display: none;
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 768px) {
+    #konsulentydelserContent {
+        height: auto;
+        flex-direction: column;
+        padding: 25px 0;
+    }
+
+    .konsulentydelse {
+        width: 100%;
+        height: 200px;
+    }
+
+    .konsulentydelse-form,
+    .konsulentydelse:first-child .konsulentydelse-form,
+    .konsulentydelse:last-child .konsulentydelse-form {
+        /*Kildehenvisning: https://bennettfeely.com/clippy*/
+        clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0% 100%);
+    }
+
+    .konsulentydelse:hover .konsulentydelse-form {
+        padding: 40px 10%;
+        /*Kildehenvisning: https://bennettfeely.com/clippy*/
+        clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0% 100%);
+    }
+
+    .konsulentydelse:hover:first-child .konsulentydelse-form {
+        /*Kildehenvisning: https://bennettfeely.com/clippy*/
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0% 100%);
+    }
+
+    .konsulentydelse:hover:last-child .konsulentydelse-form {
+        /*Kildehenvisning: https://bennettfeely.com/clippy*/
+        clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .konsulentydelse:hover {
+        height: auto;
+    }
+
+    .konsulentydelse:hover p {
+        width: 80%;
+    }
 }
 
 /******************************************************************** 
@@ -434,6 +606,10 @@ p {
     padding: 60px 0;
     align-items: center;
     justify-content: center;
+}
+
+#kerneKompPage #topTitleDescription {
+    display: none;
 }
 
 #kerneKompPageContent {
@@ -480,6 +656,22 @@ p {
     transform: rotate(180deg);
 }
 
+/* Styling for mobil */
+@media only screen and (max-width: 768px) {
+    #kerneKompPage {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    #kerneKompPage #sideTitleDescription {
+        display: none;
+    }
+
+    #kerneKompPage #dividerVertical {
+        display: none;
+    }
+}
+
 /******************************************************************** 
 ******************************* Kontakt ****************************/
 #kontaktPage {
@@ -495,9 +687,27 @@ p {
     justify-content: flex-start;
     align-items: flex-start;
     padding: 40px;
+    margin-bottom: 20px;
 }
 
 #kontaktText a,
 #kontaktText span {
-    margin: 30px 0;
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    #kontaktContent {
+         flex-direction: column;
+        align-items: center;
+    }
+    
+    #kontaktText {
+        align-items: center;
+        padding: 0;
+    }
+    
+    #kontaktPage #map {
+        width: 100%;
+        margin-bottom: 50px;
+    }
 }
