@@ -103,10 +103,6 @@ module.exports = {
 </script>
 
 <style>
-#burgerMenu {
-    display: none;
-}
-
 nav {
     height: 80px;
     display: flex;
@@ -152,8 +148,26 @@ nav {
 
 #logoMobile,
 #logoMenu,
-#menuClose {
+#menuClose,
+#burgerMenu {
     display: none;
+}
+
+#burgerMenu,
+#menuClose {
+    position: absolute;
+    top: 25px;
+    /* Vi fjerner den styling som browseren har på knapper */
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}
+
+#burgerMenu img,
+#menuClose img {
+    width: 35px;
+    height: auto;
 }
 
 /* Styling for mobil */
@@ -199,12 +213,6 @@ nav {
     #burgerMenu,
     #menuClose {
         display: block;
-        position: absolute;
-        top: 25px;
-        /* Vi fjerner den styling som browseren har på knapper */
-        background-color: transparent;
-        border: none;
-        outline: none;
     }
 
     #burgerMenu {
