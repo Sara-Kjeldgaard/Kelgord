@@ -157,7 +157,7 @@ nav {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {
     nav {
         justify-content: center;
         box-shadow: none;
@@ -224,7 +224,7 @@ nav {
     }
 
     #logoMenu img {
-        width: 100%;
+        width: 50px;
         height: auto;
     }
 

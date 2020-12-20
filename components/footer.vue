@@ -1,17 +1,17 @@
 <template>
     <footer>
         <div id="footerText">
-            <a class="contact-footer">
+            <a class="contact-footer" href="mailto:kontakt@kelgord.dk">
                 <img src="/images/Mail.svg" />
-                <span>kontakt@kelgord.dk </span>
+                <span>kontakt@kelgord.dk</span>
             </a>
-            <a class="contact-footer">
-                <img src="/images/Phone.svg" />
-                <span>+45 12343456</span>
+            <a class="contact-footer" href="tel:004524594429">
+                <img src="/images/Phone.svg"/>
+                <span>+45 24594429</span>
             </a>
             <span>Savonlinnavej 20, 8600 Silkeborg, DK</span>
         </div>
-        <a id="soMeFooter">
+        <a id="soMeFooter" href="https://www.linkedin.com/in/nkjeldgaard/?locale=da_DK"target="_blank">
             <img src="/images/Linkedin.svg" />
         </a>
     </footer>
@@ -28,6 +28,7 @@ footer {
 
 #footerText {
     display: flex;
+    align-items: center;
 }
 .contact-footer {
     border: 1px solid #d66b00;
@@ -40,6 +41,8 @@ footer {
     margin-right: 30px;
     /* Dette brgues så teksten aldrig vil dele sig i to linjer */
     white-space: nowrap;
+    text-decoration: none;
+    color: black;
 }
 
 .contact-footer img {
@@ -53,7 +56,7 @@ footer {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {
     footer {
         align-items: flex-start;
     }

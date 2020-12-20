@@ -114,7 +114,7 @@ p {
 }
 
 #langingPageTopTextContainer {
-    width: 600px;
+    width: auto;
     padding-right: 100px;
     align-items: flex-start;
 }
@@ -151,7 +151,7 @@ p {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {
     #landingPage h1,
     #landingPage h2 {
         color: white;
@@ -258,7 +258,7 @@ p {
     font-weight: 600;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {
     #divider {
         background-color: #00000019;
         height: 3px;
@@ -334,7 +334,7 @@ p {
     color: white;
     background-color: #314467;
     clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
-    padding: 40px 60px 60px 110px;
+    padding: 40px 40px 40px 110px;
 }
 
 #OmKelgordPage #experiencedText {
@@ -399,7 +399,7 @@ p {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
     #OmKelgordPage #videoAndText {
         flex-direction: column;
     }
@@ -554,7 +554,7 @@ p {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {
     #konsulentydelserContent {
         height: auto;
         flex-direction: column;
@@ -608,7 +608,7 @@ p {
     justify-content: center;
 }
 
-#kerneKompPage #topTitleDescription {
+#kerneKompPage #TopTitleDescription {
     display: none;
 }
 
@@ -657,7 +657,7 @@ p {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {    
     #kerneKompPage {
         padding: 0;
         flex-direction: column;
@@ -665,6 +665,10 @@ p {
 
     #kerneKompPage #sideTitleDescription {
         display: none;
+    }
+    
+    #kerneKompPage #TopTitleDescription {
+        display: flex;
     }
 
     #kerneKompPage #dividerVertical {
@@ -695,7 +699,7 @@ p {
     margin: 20px 0;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1030px) {
     #kontaktContent {
          flex-direction: column;
         align-items: center;
