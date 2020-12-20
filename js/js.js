@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Vi registrerer vores componenter med VUE
         // Dette fortæller VUE at når vi skriver <custom-header> så vil vi have VUE til at indsætte komponenten vi definerer i header.vue
         components: {
-            "custom-header": httpVueLoader("components/header.vue"),
-            "custom-footer": httpVueLoader("components/footer.vue")
+            "kelgord-header": httpVueLoader("components/header.vue"),
+            "kelgord-footer": httpVueLoader("components/footer.vue")
         }
     });
 });
