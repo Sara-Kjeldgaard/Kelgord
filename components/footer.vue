@@ -2,17 +2,17 @@
     <footer>
         <div id="footerText">
             <a class="contact-footer" href="mailto:kontakt@kelgord.dk">
-                <img src="/images/Mail.svg" />
+                <img src="/images/Mail.svg" alt="mail"/>
                 <span>kontakt@kelgord.dk</span>
             </a>
             <a class="contact-footer" href="tel:004524594429">
-                <img src="/images/Phone.svg"/>
+                <img src="/images/Phone.svg" alt="phone"/>
                 <span>+45 24594429</span>
             </a>
             <span>Savonlinnavej 20, 8600 Silkeborg, DK</span>
         </div>
         <a id="soMeFooter" href="https://www.linkedin.com/in/nkjeldgaard/?locale=da_DK"target="_blank">
-            <img src="/images/Linkedin.svg" />
+            <img src="/images/Linkedin.svg" alt="linkedin"/>
         </a>
     </footer>
 </template>
