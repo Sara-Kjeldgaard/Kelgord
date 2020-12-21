@@ -28,10 +28,12 @@ h2 {
 #app {
     display: flex;
     flex-direction: column;
+    /*Er med til at gøre at siden min er lige så store som skærmen - så footer ikke flyder*/
     min-height: 100vh;
 }
 
 p {
+    /*højden på en linje*/
     line-height: 22px;
 }
 
@@ -93,7 +95,7 @@ p {
     top: 0;
     bottom: 0;
     width: 55%;
-    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    /*Værktøj som bruges til at klippe en figur - Kildehenvisning: https://bennettfeely.com/clippy*/
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
 
@@ -104,7 +106,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    /* Bruges for at få den blå baggrund til at ligge øverst */
+    /* Hæver indholdet i nummerisk rækkefølge - Bruges for at få den blå baggrund til at ligge øverst */
     z-index: 1;
 }
 
@@ -167,6 +169,7 @@ p {
 
     #landingPageTopWhiteStripe,
     #langingPageTopText {
+        /*Beder browseren udregne boksen inkl padding og border (ikke margin)*/
         box-sizing: border-box;
         height: 42vh;
         width: 100%;
@@ -181,6 +184,7 @@ p {
 
     #langingPageTopText {
         position: relative;
+        /* negativ margin udhulder bunden af elementet så det kan ligge over de andre*/
         margin-bottom: -80px;
         justify-content: flex-start;
         padding-top: 20px;
@@ -259,6 +263,7 @@ p {
     font-weight: 600;
 }
 
+/*Mediaquery bruges til lave ny styling når skærmen er under 1030px*/
 @media only screen and (max-width: 1030px) {
     #divider {
         background-color: #00000019;
@@ -373,6 +378,7 @@ p {
 
 #certificationAndCoursesTextExtra {
     height: 0;
+    /*Indholdet skjules når listen er lukket*/
     overflow: hidden;
     transition: all 0.2s ease;
 }
@@ -385,6 +391,7 @@ p {
     flex: 0;
     display: flex;
     justify-content: flex-start;
+    /*Man får en hånd frem*/
     cursor: pointer;
 }
 
@@ -446,11 +453,13 @@ p {
 /******************************************************************** 
 ************************** Konsulentydelser ************************/
 #KonsulentydelserPage {
+    /*Gør at footeren bliver skubbet ned - fortæller konsulentydelserpage at den må tage ekstra plad og fylde det der er*/
     flex: 1;
 }
 
 #konsulentydelser {
     width: 100%;
+    /*Skjuler indhold som ligger ud over forælderen - det som flyder ud over bliver ikke vist. */
     overflow: hidden;
     justify-content: space-between;
 }
@@ -464,12 +473,14 @@ p {
 }
 
 .konsulentydelse {
+    /*Flex rammer det overskydende plads. Det gør at hver konsulentydelse fylder lige meget (skubber med styrke 3 - jo mere du skubber jo mere fylder du)*/
     flex: 3;
     height: 390px;
     transition: all 0.3s ease;
 }
 
 .konsulentydelse:hover {
+    /*Flex rammer det overskydende plads. Nu når vi hover skal elementet skubbe styrke 5*/
     flex: 5;
     z-index: 1;
     height: 450px;
@@ -533,6 +544,7 @@ p {
 .konsulentydelse:hover p {
     display: block;
     text-align: center;
+    /*teksten skalerer med skærmstørelsen. */
     width: 17vw;
 }
 
@@ -656,6 +668,7 @@ p {
 }
 
 .kerne-komp-active img {
+    /*roterer pilen*/
     transform: rotate(180deg);
 }
 

@@ -58,6 +58,7 @@ footer {
 /* Styling for mobil */
 @media only screen and (max-width: 1030px) {
     footer {
+        /*Flex start gør at indholdet lægger sig i starten af forælderen. */
         align-items: flex-start;
     }
 

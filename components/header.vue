@@ -129,9 +129,11 @@ nav {
     display: block;
     width: 180px;
     text-align: center;
+    /*Animerer farven og vægt op så skiftet bliver smooth*/
     transition: all 0.2s ease;
 }
 
+    /*:hover = den styling som er når man hover*/
 .nav-list a:hover,
 .nav-list .active {
     color: #d66b00;
