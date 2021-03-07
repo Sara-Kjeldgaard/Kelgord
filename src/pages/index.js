@@ -1,9 +1,17 @@
-import * as React from "react";
+import React from "react";
 import KeldgorFooter from "../components/footer";
 import KeldgorHeader from "../components/header";
+import TypeWriter from "../components/typewriter";
 import Helmet from "react-helmet";
 
-// markup
+var titles = [
+  "Digitalisering?",
+  "Projektledelse?",
+  "Business Intelligence?",
+  "Agilt Setup?",
+  "Master data?",
+];
+
 const IndexPage = () => {
   return (
     <>
@@ -37,7 +45,9 @@ const IndexPage = () => {
         <div className="column">
           <h3>
             Har i brug for erfaren hjælp til
-            <span id="landingPageTitleCaroussel">Master data?</span>
+            <span style={{ minHeight: 50 }} id="landingPageTitleCaroussel">
+              <TypeWriter words={titles} />
+            </span>
           </h3>
           <div id="landingPageMainText">
             <p>

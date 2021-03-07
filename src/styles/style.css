@@ -154,7 +154,7 @@ p {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1100px) {
   #landingPage h1,
   #landingPage h2 {
     color: white;
@@ -187,8 +187,9 @@ p {
     position: relative;
     /* negativ margin udhulder bunden af elementet så det kan ligge over de andre*/
     margin-bottom: -80px;
-    justify-content: flex-start;
+    justify-content: center;
     padding-top: 20px;
+    padding-bottom: 10%;
   }
 
   #langingPageTopTextContainer {
@@ -205,6 +206,18 @@ p {
 
   #landingPageMainText {
     width: 80%;
+  }
+
+  #landingPageMainText img {
+    width: 80%;
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #langingPageTopText {
+    padding-top: 0;
+    padding-bottom: 25%;
   }
 }
 
@@ -264,8 +277,8 @@ p {
   font-weight: 600;
 }
 
-/*Mediaquery bruges til lave ny styling når skærmen er under 1030px*/
-@media only screen and (max-width: 1030px) {
+/*Mediaquery bruges til lave ny styling når skærmen er under 1100px*/
+@media only screen and (max-width: 1100px) {
   #divider {
     background-color: #00000019;
     height: 3px;
@@ -378,14 +391,15 @@ p {
 }
 
 #certificationAndCoursesTextExtra {
-  height: 0;
+  height: auto;
+  max-height: 0;
   /*Indholdet skjules når listen er lukket*/
   overflow: hidden;
   transition: all 0.2s ease;
 }
 
 #certificationAndCoursesTextExtra.show {
-  height: 500px;
+  max-height: 500px;
 }
 
 #certificationAndCourses .orange-link {
@@ -394,6 +408,11 @@ p {
   justify-content: flex-start;
   /*Man får en hånd frem*/
   cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
 #certificationAndCourses .orange-link img {
@@ -401,11 +420,17 @@ p {
 }
 
 #readMore {
-  width: 290px;
+  margin-top: 10px;
+  margin-bottom: 100px;
 }
 
-#showLess {
-  width: 100px;
+#readMore img {
+  transform: rotate(0deg);
+  transition: all 0.1s ease-in-out;
+}
+
+#readMore.show img {
+  transform: rotate(180deg);
 }
 
 /* Styling for mobil */
@@ -441,13 +466,10 @@ p {
     width: 100%;
   }
 
-  #certificationAndCoursesTextExtra.show {
-    height: 580px;
-  }
-
   #certificateIcon {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 100px;
   }
 }
 
@@ -674,7 +696,7 @@ p {
 }
 
 /* Styling for mobil */
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1100px) {
   #kerneKompPage {
     padding: 0;
     flex-direction: column;
@@ -716,7 +738,7 @@ p {
   margin: 20px 0;
 }
 
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1100px) {
   #kontaktContent {
     flex-direction: column;
     align-items: center;

@@ -26,7 +26,7 @@ module.exports = {
         background_color: "#FFFFFF",
         theme_color: "#1f3050",
         display: "standalone",
-        icon: "static/images/Logo-Keldgor.png",
+        icon: "static/images/keldgor-fav.png",
       },
     },
   ],

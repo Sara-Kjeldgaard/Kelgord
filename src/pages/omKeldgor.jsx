@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import KeldgorFooter from "../components/footer";
 import KeldgorHeader from "../components/header";
 import Helmet from "react-helmet";
 
 const OmKeldgorPage = () => {
+  const [showCerts, setShowCerts] = useState(false);
+
   return (
     <>
       <Helmet
@@ -21,6 +23,7 @@ const OmKeldgorPage = () => {
         <div id="videoAndText">
           <div id="video">
             <iframe
+              title="Keldgor | video"
               width="560"
               height="315"
               src="https://www.youtube.com/embed/81YdBkQm6bU?"
@@ -77,12 +80,10 @@ const OmKeldgorPage = () => {
               </p>
             </div>
 
-            <a id="readMore" className="orange-link">
-              <span>Læs mere om Keldgors certificeringer</span>
-              <img src="/images/ArrowDown.svg" alt="arrow-down" />
-            </a>
-
-            <div id="certificationAndCoursesTextExtra">
+            <div
+              id="certificationAndCoursesTextExtra"
+              className={showCerts ? "show" : ""}
+            >
               <p>
                 <span>1996 – 2014 </span>- Diverse SAP konferencer på BI/HR, 3-5
                 dage/år, f.eks. BI2014
@@ -112,11 +113,19 @@ const OmKeldgorPage = () => {
                 <span>1991 – 1994 </span>- Teknisk uddannelse på SAS værktøjer,
                 Sammenlagt ca. 2 uge
               </p>
-              <a id="showLess" className="orange-link">
-                <span>Vis mindre</span>
-                <img src="/images/ArrowUp.svg" alt="arrow-up" />
-              </a>
             </div>
+            <button
+              id="readMore"
+              className={`orange-link ${showCerts ? "show" : ""}`}
+              onClick={() => setShowCerts(!showCerts)}
+            >
+              <span>
+                {showCerts
+                  ? "Læs mindre"
+                  : "Læs mere om Keldgors certificeringer"}
+              </span>
+              <img src="/images/ArrowDown.svg" alt="arrow-down" />
+            </button>
           </div>
           <div id="certificateIcon">
             <img src="/images/ScrumIcon.png" alt="scrum" />
