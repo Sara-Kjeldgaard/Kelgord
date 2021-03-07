@@ -1,0 +1,142 @@
+nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  box-shadow: 0px 0px 16px #0000002f;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-list li {
+  display: block;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 180px;
+  text-align: center;
+  /*Animerer farven og vægt op så skiftet bliver smooth*/
+  transition: all 0.2s ease;
+}
+
+/*:hover = den styling som er når man hover*/
+.nav-list a:hover,
+.nav-list .active {
+  color: #d66b00;
+  font-weight: bold;
+}
+
+#logoTop {
+  height: 60%;
+}
+
+#logoTop img {
+  height: 100%;
+}
+
+#logoMobile,
+#logoMenu,
+#menuClose,
+#burgerMenu {
+  display: none;
+}
+
+#burgerMenu,
+#menuClose {
+  position: absolute;
+  top: 25px;
+  /* Vi fjerner den styling som browseren har på knapper */
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#burgerMenu img,
+#menuClose img {
+  width: 35px;
+  height: auto;
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 1030px) {
+  nav {
+    justify-content: center;
+    box-shadow: none;
+  }
+
+  nav.landing {
+    background-color: #314467;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+    background-color: white;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    transition: all 0.2s ease;
+  }
+
+  .nav-list.open {
+    left: 0;
+  }
+
+  .nav-list li {
+    padding: 10px 0;
+    margin: 10px 0;
+  }
+
+  .nav-list li a {
+    font-size: 20px;
+  }
+
+  #burgerMenu,
+  #menuClose {
+    display: block;
+  }
+
+  #burgerMenu {
+    left: 25px;
+  }
+
+  #menuClose {
+    right: 25px;
+  }
+
+  #logoMenu {
+    display: block;
+    width: 20%;
+    position: absolute;
+    top: 100px;
+    left: 40%;
+  }
+
+  #logoMenu img {
+    width: 50px;
+    height: auto;
+  }
+
+  #logoMobile {
+    display: block;
+  }
+
+  #logo {
+    display: none;
+  }
+}
