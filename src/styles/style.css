@@ -1,0 +1,734 @@
+html,
+body,
+main {
+  width: 100%;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  /*Gør at eksempel chrome viser fonts mere korrekt - Brugt så min font er mere strømlignet med design (fonten bliver blødere)*/
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  color: #d66b00;
+  font-size: 24px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+#___gatsby,
+#gatsby-focus-wrapper {
+  display: flex;
+  flex-direction: column;
+  /*Er med til at gøre at siden min er lige så store som skærmen - så footer ikke flyder*/
+  min-height: 100vh;
+}
+
+p {
+  /*højden på en linje*/
+  line-height: 22px;
+}
+
+/******************************************************************** 
+***************************** Landing Page *************************/
+
+#landingPage h1 {
+  width: 400px;
+}
+
+#landingPage h2 {
+  width: 460px;
+}
+
+#landingPage h1,
+#landingPage h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+#landingPage h3 {
+  color: #1f3050;
+  font-weight: 800;
+  font-size: 23px;
+  width: 670px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+#landingPage h3 #landingPageTitleCaroussel {
+  color: #d66b00;
+  font-size: 32px;
+  padding-left: 3px;
+  display: block;
+  margin-top: 10px;
+}
+
+#langingPageTop {
+  background-color: #314467;
+}
+
+#landingPageTopContent {
+  display: flex;
+  justify-content: flex-end;
+  height: 70vh;
+  /* Bruges så vi kan lægge boxen med tekst oven på billedet */
+  position: relative;
+  max-width: 2200px;
+  max-height: 1000px;
+  margin: 0 auto;
+}
+
+#landingPageTopWhiteStripe,
+#langingPageTopText {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  /*Værktøj som bruges til at klippe en figur - Kildehenvisning: https://bennettfeely.com/clippy*/
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+}
+
+#langingPageTopText {
+  left: 0;
+  background-color: #314467;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  /* Hæver indholdet i nummerisk rækkefølge - Bruges for at få den blå baggrund til at ligge øverst */
+  z-index: 1;
+}
+
+#landingPageTopWhiteStripe {
+  left: 40px;
+  background-color: white;
+}
+
+#langingPageTopTextContainer {
+  width: auto;
+  padding-right: 18%;
+  align-items: flex-start;
+}
+
+#landingPage h2 span {
+  font-weight: bold;
+}
+
+#landingPage #KeldgorPic {
+  background-image: url(/images/KeldgorNJ.webp);
+  width: 75%;
+
+  background-size: cover;
+  background-position: center;
+}
+
+#landingPageMainText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  max-width: 850px;
+}
+
+#landingPageMainText p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+#landingPageMainText img {
+  width: 120%;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 1030px) {
+  #landingPage h1,
+  #landingPage h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 23px;
+    text-align: center;
+    width: 80%;
+  }
+  #landingPageTopContent {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #landingPageTopWhiteStripe,
+  #langingPageTopText {
+    /*Beder browseren udregne boksen inkl padding og border (ikke margin)*/
+    box-sizing: border-box;
+    height: 42vh;
+    width: 100%;
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  }
+
+  #landingPageTopWhiteStripe {
+    left: 0;
+    top: 25px;
+  }
+
+  #langingPageTopText {
+    position: relative;
+    /* negativ margin udhulder bunden af elementet så det kan ligge over de andre*/
+    margin-bottom: -80px;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  #langingPageTopTextContainer {
+    width: 100%;
+    padding-right: 0;
+    align-items: center;
+  }
+
+  #landingPage #KeldgorPic {
+    width: 100%;
+    height: 50vh;
+    background-image: url("/images/KeldgorNJmobile.webp");
+  }
+
+  #landingPageMainText {
+    width: 80%;
+  }
+}
+
+/*********************** Side Title Description ********************* 
+************************ Top Title Description *********************/
+
+#TopTitleDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px;
+}
+
+#sideTitleDescription h1,
+#TopTitleDescription h1 {
+  color: #d66b00;
+  font-size: 32px;
+}
+
+#divider {
+  background-color: #00000019;
+  height: 3px;
+  width: 500px;
+}
+
+#TopTitleDescription p {
+  text-align: center;
+  width: 300px;
+  font-weight: 600;
+}
+
+#sideTitleDescription p span,
+#TopTitleDescription p span {
+  font-weight: bold;
+}
+
+#sideTitleDescription {
+  margin: 0 60px;
+  align-items: flex-start;
+}
+
+#sideTitleDescription h1 {
+  margin-bottom: 10px;
+}
+
+#dividerVertical {
+  background-color: #00000019;
+  height: 500px;
+  width: 3px;
+  margin-right: 60px;
+}
+
+#sideTitleDescription p {
+  margin-top: 0;
+  text-align: left;
+  width: 320px;
+  font-weight: 600;
+}
+
+/*Mediaquery bruges til lave ny styling når skærmen er under 1030px*/
+@media only screen and (max-width: 1030px) {
+  #divider {
+    background-color: #00000019;
+    height: 3px;
+    width: 100%;
+  }
+}
+
+/******************************************************************** 
+********** Styled links with orange border and arrow ***************/
+.orange-link {
+  display: flex;
+  align-items: center;
+  color: #d66b00;
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.orange-link:hover {
+  color: #f87c00;
+  transition: all 0.2s ease;
+}
+
+.orange-link img {
+  margin-left: 5px;
+  width: 25px;
+}
+
+/******************************************************************** 
+****************************** Om Keldgor **************************/
+
+#OmKeldgorPage #videoAndText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+/*Videoen hentes fra Youtube. Vi gør videoen responsiv efter denne guide - Kildehenvisning: https://flaviocopes.com/responsive-youtube-videos/?fbclid=IwAR0QUZhjsiBtL4ji1c8JO0j0L6VGfv1rJvcQNzwAVyhr7oymGr7LxHvP_5k*/
+#OmKeldgorPage #video {
+  margin-right: 5px;
+  /*Dette gør at videoen ikke fylder ud over vores div (bruges da den er absolutte)*/
+  overflow: hidden;
+  /*Bruges da det absolutte barn skal lægge sig i forhold til dette element*/
+  position: relative;
+  width: 780px;
+  box-shadow: 2px 3px 15px #00000053;
+  /*Kildehenvisning: https://bennettfeely.com/clippy/?fbclid=IwAR1cLS7YieJDtsOcMI_qVeR_LuyaBE5865ammVgkrCDiP9XbrHW2b4Hb4_E*/
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+}
+
+/*::after - Er et pseudo element (ikke et vi skriver i html, css indsætter det for os) Elementet bruges som indhold og til at bestemme en størrelse*/
+#OmKeldgorPage #video::after {
+  /*Vi bruger padding top for at få div'en til at fylde så meget som videoen. Her er 56.25% det magiske tal*/
+  padding-top: 56.25%;
+  /*Bruges for at den fylder noget*/
+  display: block;
+  content: "";
+}
+
+#OmKeldgorPage #video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#OmKeldgorPage #videoText {
+  height: 40%;
+  width: 550px;
+  color: white;
+  background-color: #314467;
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0% 100%);
+  padding: 40px 40px 40px 110px;
+}
+
+#OmKeldgorPage #experiencedText {
+  margin: 90px;
+  width: 650px;
+}
+
+#certificationAndCourses {
+  justify-content: space-between;
+  width: 60%;
+  max-width: 1100px;
+}
+
+#certificationAndCoursesText {
+  width: 435px;
+}
+
+#certificationAndCoursesText p span {
+  font-weight: bold;
+}
+
+#certificationAndCoursesTextAlways {
+  margin: 35px 0;
+}
+
+#certificationAndCoursesTextAlways p {
+  margin: 3px 0;
+}
+
+#OmKeldgorPage #certificateIcon img {
+  width: 120px;
+  margin: 30px 20px;
+}
+
+#certificationAndCoursesTextExtra {
+  height: 0;
+  /*Indholdet skjules når listen er lukket*/
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+#certificationAndCoursesTextExtra.show {
+  height: 500px;
+}
+
+#certificationAndCourses .orange-link {
+  flex: 0;
+  display: flex;
+  justify-content: flex-start;
+  /*Man får en hånd frem*/
+  cursor: pointer;
+}
+
+#certificationAndCourses .orange-link img {
+  width: 12px;
+}
+
+#readMore {
+  width: 290px;
+}
+
+#showLess {
+  width: 100px;
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 1200px) {
+  #OmKeldgorPage #videoAndText {
+    flex-direction: column;
+  }
+
+  #OmKeldgorPage #video {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 0% 100%);
+    margin: 0;
+  }
+
+  #OmKeldgorPage #videoText {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  #OmKeldgorPage #experiencedText {
+    width: 80%;
+    margin: 30px auto;
+  }
+
+  #certificationAndCourses {
+    width: 80%;
+    flex-direction: column;
+  }
+
+  #certificationAndCoursesText {
+    width: 100%;
+  }
+
+  #certificationAndCoursesTextExtra.show {
+    height: 580px;
+  }
+
+  #certificateIcon {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+/******************************************************************** 
+************************** Konsulentydelser ************************/
+#KonsulentydelserPage {
+  /*Gør at footeren bliver skubbet ned - fortæller konsulentydelserpage at den må tage ekstra plad og fylde det der er*/
+  flex: 1;
+}
+
+#konsulentydelser {
+  width: 100%;
+  /*Skjuler indhold som ligger ud over forælderen - det som flyder ud over bliver ikke vist. */
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+#konsulentydelserContent {
+  width: 100%;
+  max-width: 2200px;
+  height: 450px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.konsulentydelse {
+  /*Flex rammer det overskydende plads. Det gør at hver konsulentydelse fylder lige meget (skubber med styrke 3 - jo mere du skubber jo mere fylder du)*/
+  flex: 3;
+  height: 390px;
+  transition: all 0.3s ease;
+}
+
+.konsulentydelse:hover {
+  /*Flex rammer det overskydende plads. Nu når vi hover skal elementet skubbe styrke 5*/
+  flex: 5;
+  z-index: 1;
+  height: 450px;
+  /* her bruges drop shadow da normal box shadow ikke fungerer med clip path (som vi brugre til at lave formen)
+    /* Kildehenvisning: https://css-tricks.com/using-box-shadows-and-clip-path-together/ */
+  filter: drop-shadow(0px 0px 19px rgba(0, 0, 0, 0.15));
+}
+
+.konsulentydelse-form {
+  height: 100%;
+  width: 125%;
+  margin-left: -12.5%;
+  background-color: #314467;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* bruges så padding ikke får boksen til at blive større */
+  box-sizing: border-box;
+  /*Kildehenvisning: https://bennettfeely.com/clippy*/
+  /* Vi bruger dog en px værdi istedet for procent. Det er fordi vi gerne vil have formen til at hælde lige meget
+    selvom elementet bliver større (hvor en procent værdi ville få den til at hælde mere) */
+  clip-path: polygon(100px 0, 100% 0, calc(100% - 100px) 100%, 0% 100%);
+}
+
+.konsulentydelse:first-child .konsulentydelse-form {
+  /*Kildehenvisning: https://bennettfeely.com/clippy*/
+  clip-path: polygon(0 0, 100% 0, calc(100% - 100px) 100%, 0% 100%);
+}
+
+.konsulentydelse:last-child .konsulentydelse-form {
+  /*Kildehenvisning: https://bennettfeely.com/clippy*/
+  clip-path: polygon(100px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.konsulentydelse:first-child:hover .konsulentydelse-form {
+  /*Kildehenvisning: https://bennettfeely.com/clippy*/
+  clip-path: polygon(0 0, 100% 0, calc(100% - 120px) 100%, 0% 100%);
+}
+
+.konsulentydelse:last-child:hover .konsulentydelse-form {
+  /*Kildehenvisning: https://bennettfeely.com/clippy*/
+  clip-path: polygon(120px 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.konsulentydelse:hover .konsulentydelse-form {
+  background-color: white;
+  /*Kildehenvisning: https://bennettfeely.com/clippy*/
+  /* Vi bruger dog en px værdi istedet for procent. Det er fordi vi gerne vil have formen til at hælde lige meget
+    selvom elementet bliver større (hvor en procent værdi ville få den til at hælde mere) */
+  clip-path: polygon(120px 0, 100% 0, calc(100% - 120px) 100%, 0% 100%);
+}
+
+.konsulentydelse:hover h2 {
+  color: #d66b00;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.konsulentydelse:hover p {
+  display: block;
+  text-align: center;
+  /*teksten skalerer med skærmstørelsen. */
+  width: 17vw;
+}
+
+/*Her sørger vi for at teksten ikke bliver bredere når rækken med konsulentydelser holder op med at vokse */
+@media only screen and (min-width: 2200px) {
+  .konsulentydelse:hover p {
+    width: 396px;
+  }
+}
+
+.konsulentydelse h2 {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  white-space: pre-line;
+  padding: 0 50px;
+  width: 70%;
+}
+
+.konsulentydelse p {
+  display: none;
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 1230px) {
+  #konsulentydelserContent {
+    height: auto;
+    flex-direction: column;
+    padding: 25px 0;
+  }
+
+  .konsulentydelse {
+    width: 100%;
+    height: 200px;
+  }
+
+  .konsulentydelse-form,
+  .konsulentydelse:first-child .konsulentydelse-form,
+  .konsulentydelse:last-child .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0% 100%);
+  }
+
+  .konsulentydelse:hover .konsulentydelse-form {
+    padding: 40px 10%;
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0% 100%);
+  }
+
+  .konsulentydelse:hover:first-child .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0% 100%);
+  }
+
+  .konsulentydelse:hover:last-child .konsulentydelse-form {
+    /*Kildehenvisning: https://bennettfeely.com/clippy*/
+    clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .konsulentydelse:hover {
+    height: auto;
+  }
+
+  .konsulentydelse:hover p {
+    width: 80%;
+  }
+}
+
+/******************************************************************** 
+**************** KerneværdierPage and Kompetencer ******************/
+
+#kerneKompPage {
+  flex: 1;
+  padding: 60px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+#kerneKompPage #TopTitleDescription {
+  display: none;
+}
+
+#kerneKompPageContent {
+  width: 80%;
+  max-width: 1200px;
+}
+
+#kerneKompPage h2 {
+  font-size: 22px;
+  color: #1f3050;
+  transition: all 0.2s ease;
+}
+
+.kerne-komp img {
+  transition: all 0.2s ease;
+}
+
+.kerne-komp p {
+  width: 95%;
+  max-width: 700px;
+  height: 0;
+  /*denne gemmer det som fylder ud over (virker da height er 0)*/
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.kerne-komp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#kerneKompPage .kerne-komp:hover h2,
+#kerneKompPage .kerne-komp-active h2 {
+  color: #d66b00;
+}
+
+#kerneKompPage .kerne-komp-active p {
+  height: 90px;
+}
+
+.kerne-komp-active img {
+  /*roterer pilen*/
+  transform: rotate(180deg);
+}
+
+/* Styling for mobil */
+@media only screen and (max-width: 1030px) {
+  #kerneKompPage {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  #kerneKompPage #sideTitleDescription {
+    display: none;
+  }
+
+  #kerneKompPage #TopTitleDescription {
+    display: flex;
+  }
+
+  #kerneKompPage #dividerVertical {
+    display: none;
+  }
+}
+
+/******************************************************************** 
+******************************* Kontakt ****************************/
+#kontaktPage {
+  flex: 1;
+}
+
+#kontaktPage #map {
+  width: 400px;
+  height: 300px;
+}
+
+#kontaktText {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+#kontaktText a,
+#kontaktText span {
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 1030px) {
+  #kontaktContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #kontaktText {
+    align-items: center;
+    padding: 0;
+  }
+
+  #kontaktPage #map {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
