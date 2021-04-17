@@ -48,7 +48,7 @@ const KontaktPage = () => {
           <div id="divider"></div>
           <p>
             Kontakt endelig Keldgor for at høre mere og tag et kig på kortet for
-            hvor Keldgor er placeret.
+            at se, hvor Keldgor er placeret.
           </p>
         </div>
         <div className="row" id="kontaktContent">

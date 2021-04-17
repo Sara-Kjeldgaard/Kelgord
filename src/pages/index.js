@@ -69,7 +69,7 @@ const IndexPage = () => {
               står over for, og skaber sparring, løsninger og vækst.
             </p>
             <img
-              src="/images/LandingGraphic.webp"
+              src="/images/LandingGraphic.png"
               alt="Fra udfordring til vækst"
             />
           </div>

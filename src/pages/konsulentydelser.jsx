@@ -12,7 +12,7 @@ const KonsulentydelserPage = () => {
         description="Læs om hvad Keldgor kan hjælpe jeres virksomhed med, hvad end jeres udfordring ligger indenfor digitalisering, projektledelse, agilt setup, BI, master data eller noget helt andet."
       />
       <KeldgorHeader active="Konsulentydelser" />
-      <main id="KonsulentydelserPage" class="column">
+      <main id="KonsulentydelserPage" className="column">
         <div id="TopTitleDescription">
           <h1>Konsulentydelser</h1>
           <div id="divider"></div>
@@ -22,9 +22,9 @@ const KonsulentydelserPage = () => {
           </p>
         </div>
         <div id="konsulentydelser">
-          <div id="konsulentydelserContent" class="row">
-            <div class="konsulentydelse">
-              <div class="konsulentydelse-form">
+          <div id="konsulentydelserContent" className="row">
+            <div className="konsulentydelse">
+              <div className="konsulentydelse-form">
                 <h2>Digitalisering</h2>
                 <p>
                   I disse år er digitalisering på alles læber. Jeg har den
@@ -37,8 +37,8 @@ const KonsulentydelserPage = () => {
               </div>
             </div>
 
-            <div class="konsulentydelse">
-              <div class="konsulentydelse-form">
+            <div className="konsulentydelse">
+              <div className="konsulentydelse-form">
                 <h2>Projektledelse</h2>
                 <p>
                   Min erfaring på projektledelse kan hjælpe jeres projekter til
@@ -51,8 +51,8 @@ const KonsulentydelserPage = () => {
               </div>
             </div>
 
-            <div class="konsulentydelse">
-              <div class="konsulentydelse-form">
+            <div className="konsulentydelse">
+              <div className="konsulentydelse-form">
                 <h2>Business Intelligence</h2>
                 <p>
                   Mængden af data som opsamles i virksomheden og dens omverden
@@ -66,8 +66,8 @@ const KonsulentydelserPage = () => {
               </div>
             </div>
 
-            <div class="konsulentydelse">
-              <div class="konsulentydelse-form">
+            <div className="konsulentydelse">
+              <div className="konsulentydelse-form">
                 <h2>Agilt Setup</h2>
                 <p>
                   Motivation hos vidensbaserede medarbejdere skabes af
@@ -80,8 +80,8 @@ const KonsulentydelserPage = () => {
               </div>
             </div>
 
-            <div class="konsulentydelse">
-              <div class="konsulentydelse-form">
+            <div className="konsulentydelse">
+              <div className="konsulentydelse-form">
                 <h2>Master data</h2>
                 <p>
                   Et nødvendigt grundlag for effektive digitale processer er

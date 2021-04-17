@@ -7,7 +7,7 @@ const KeldgorFooter = () => {
       <div id="footerText">
         <a className="contact-footer" href="mailto:kontakt@keldgor.dk">
           <img src="/images/Mail.svg" alt="mail" />
-          <span>kontakt@keldgor.dk</span>
+          <span>keldgor@gmail.com</span>
         </a>
         <a className="contact-footer" href="tel:004524594429">
           <img src="/images/Phone.svg" alt="phone" />
