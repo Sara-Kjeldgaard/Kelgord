@@ -2,6 +2,12 @@
   display: flex;
 }
 
+@media only screen and (max-width: 900px) {
+  #certificateIcon {
+    flex-wrap: wrap;
+  }
+}
+
 .cert {
   width: 110px;
   height: 110px;
