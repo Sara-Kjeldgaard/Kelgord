@@ -29,5 +29,12 @@ module.exports = {
         icon: "static/images/keldgor-fav.png",
       },
     },
+    {
+      resolve: `gatsby-plugin-clarity`,
+      options: {
+        clarity_project_id: "6bgclget08",
+        enable_on_dev_env: true,
+      },
+    },
   ],
 };
