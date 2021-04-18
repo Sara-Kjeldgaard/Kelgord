@@ -55,7 +55,7 @@ const KontaktPage = () => {
           <div id="kontaktText" className="column">
             <a className="contact-footer" href="mailto:kontakt@Keldgor.com">
               <img src="/images/Mail.svg" alt="mail" />
-              <span>kontakt@Keldgor.dk</span>
+              <span>keldgor@gmail.com</span>
             </a>
             <a className="contact-footer" href="tel:004524594429">
               <img src="/images/Phone.svg" alt="phone" />

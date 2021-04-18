@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import KeldgorFooter from "../components/footer";
 import KeldgorHeader from "../components/header";
 import Helmet from "react-helmet";
+import "../styles/omKeldgor.css";
 
 const OmKeldgorPage = () => {
   const [showCerts, setShowCerts] = useState(false);
@@ -18,7 +19,7 @@ const OmKeldgorPage = () => {
         <div id="TopTitleDescription">
           <h1>Om Keldgor</h1>
           <div id="divider"></div>
-          <p>Keldgor er en enkeltmandsvirksomhed med stort erfaring.</p>
+          <p>Keldgor er en enkeltmandsvirksomhed med stor erfaring.</p>
         </div>
         <div id="videoAndText">
           <div id="video">
@@ -26,7 +27,7 @@ const OmKeldgorPage = () => {
               title="Keldgor | video"
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/81YdBkQm6bU?"
+              src="https://www.youtube.com/embed/-mX-9TYQOoY"
               allow="accelerometer; autoplay; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -63,6 +64,12 @@ const OmKeldgorPage = () => {
               seneste kurser og certificeringer.
             </p>
             <div id="certificationAndCoursesTextAlways">
+              <p>
+                <span>2021</span> - PRINCE2 Agile Practitioner
+              </p>
+              <p>
+                <span>2020</span> - PRINCE2 Foundation
+              </p>
               <p>
                 <span>2019</span> - ITIL Foundation
               </p>
@@ -128,11 +135,19 @@ const OmKeldgorPage = () => {
             </button>
           </div>
           <div id="certificateIcon">
-            <img src="/images/ScrumIcon.png" alt="scrum" />
-            <img src="/images/BIIcon.png" alt="Business Intelligence" />
+            <div className="cert" style={{ fontSize: 25 }}>
+              SCRUM
+            </div>
+            <div className="cert" style={{ fontSize: 50 }}>
+              BI
+            </div>
+            <div className="cert">PRINCE2</div>
+            <div className="cert" style={{ fontSize: 30 }}>
+              SAFe
+            </div>
           </div>
         </div>
-      </main>{" "}
+      </main>
       <KeldgorFooter />
     </>
   );
